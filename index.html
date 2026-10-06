@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="is">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalyst ehf.</title>
+<meta name="description" content="Catalyst ehf. er eignarhaldsfélag og meirihlutaeigandi að Uniconta Ísland ehf.">
+<link rel="icon" href="image.jpg" type="image/jpeg">
+<style>
+  :root { --red: #f50000; --ink: #111; --muted: #6b6b6b; --line: #e8e8e8; --bg: #fff; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    display: flex; flex-direction: column; min-height: 100vh;
+  }
+  main {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 48px 16px;
+  }
+  .logo { width: min(240px, 60vw); height: auto; margin-bottom: 40px; }
+  h1 { font-size: 1.05rem; font-weight: 600; letter-spacing: .02em; margin: 0 0 12px; }
+  p { margin: 0; color: var(--muted); line-height: 1.6; max-width: 34rem; }
+  p a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--red); }
+  p a:hover { color: var(--red); }
+  .btn {
+    display: inline-block; margin-top: 32px; padding: 12px 28px; border-radius: 999px;
+    background: var(--red); color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem;
+    transition: background .15s;
+  }
+  .btn:hover { background: #c80000; }
+  .btn:focus-visible, p a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  footer {
+    border-top: 1px solid var(--line); padding: 20px 16px; text-align: center;
+    font-size: .8rem; color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="image.jpg" alt="Catalyst" width="1470" height="1050">
+  <h1>Catalyst ehf.</h1>
+  <p>Eignarhaldsfélag og meirihlutaeigandi að <a href="https://www.uniconta.com/is/">Uniconta Ísland ehf.</a></p>
+  <a class="btn" id="mail" href="#">Senda póst</a>
+</main>
+<footer>Catalyst ehf. · kt. 541015-4690</footer>
+<script>
+  // Netfangið er sett saman í vafranum svo það sjáist ekki í HTML-kóðanum.
+  (function () {
+    var u = "ingvaldur", d = "ingvaldur" + "." + "com";
+    document.getElementById("mail").href = "mailto:" + u + "@" + d;
+  })();
+</script>
+</body>
+</html>
